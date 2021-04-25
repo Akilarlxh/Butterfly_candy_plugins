@@ -6,13 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "directories": {
+    "lib": "./lib"
+  },
   "dependencies": {
     "pug": "^3.0.0"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Akilarlxh/Butterfly_candy_plugins.git"
+  },
   "keywords": [
+    "hexo",
+    "renderer",
     "butterfly",
+    "candyhome",
+    "theme-butterfly",
+    "plugins",
     "commentsbar"
   ],
   "author": "akilarlxh",
-  "license": "ISC"
+  "license": "Apache-2.0"
 }
