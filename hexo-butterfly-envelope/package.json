@@ -1,30 +1,33 @@
 {
   "name": "hexo-butterfly-envelope",
-  "version": "1.0.0",
-  "description": "A letterhead style message board",
+  "version": "0.0.20",
+  "description": "A commentsbar beautify plugin for theme-butterfly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint ."
   },
   "directories": {
     "lib": "./lib"
   },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "keywords": [
+    "hexo",
+    "renderer",
+    "envelop",
+    "butterfly",
+    "theme-butterfly",
+    "plugins"
+  ],
+  "author": "akilarlxh",
+  "license": "Apache-2.0",
   "dependencies": {
     "pug": "^3.0.0"
   },
   "repository": {
     "type" : "git",
     "url" : "https://github.com/Akilarlxh/Butterfly_candy_plugins.git"
-  },
-  "keywords": [
-    "hexo",
-    "renderer",
-    "butterfly",
-    "candyhome",
-    "theme-butterfly",
-    "plugins",
-    "commentsbar"
-  ],
-  "author": "akilarlxh",
-  "license": "Apache-2.0"
+  }
 }

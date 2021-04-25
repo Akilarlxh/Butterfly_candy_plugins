@@ -21,6 +21,8 @@
         message: 有什么想问的？<br>有什么想说的？<br>有什么想吐槽的？<br>哪怕是有什么想吃的，都可以告诉我哦~
         bottom: 自动书记人偶竭诚为您服务！
         height: #1050px，信封划出的高度
+        path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+        front_matter: #【可选】comments页面的 front_matter 配置
     ```
 
 # 截图
