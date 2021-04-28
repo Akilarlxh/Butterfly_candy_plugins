@@ -1,6 +1,6 @@
 # hexo-butterfly-envelope
 
-给`hexo-theme-butterfly`添加 [信封样式留言板](https://akilar.top/posts/58900a8/)
+给`hexo-theme-butterfly`添加 [信封样式留言板](https://akilar.top/posts/e2d3c450/)
 
 # 安装
 
@@ -14,7 +14,7 @@
 
     ```yaml
       # envelope_comment
-      # see https://akilar.top/posts/58900a8/
+      # see https://akilar.top/posts/e2d3c450/
       envelope_comment:
         enable: true #控制开关
         cover: https://ae01.alicdn.com/kf/U5bb04af32be544c4b41206d9a42fcacfd.jpg #信笺头部图片
