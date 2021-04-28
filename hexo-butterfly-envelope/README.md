@@ -16,13 +16,19 @@
       # envelope_comment
       # see https://akilar.top/posts/58900a8/
       envelope_comment:
-        enable: true
-        cover: https://ae01.alicdn.com/kf/U5bb04af32be544c4b41206d9a42fcacfd.jpg
-        message: 有什么想问的？<br>有什么想说的？<br>有什么想吐槽的？<br>哪怕是有什么想吃的，都可以告诉我哦~
-        bottom: 自动书记人偶竭诚为您服务！
+        enable: true #控制开关
+        cover: https://ae01.alicdn.com/kf/U5bb04af32be544c4b41206d9a42fcacfd.jpg #信笺头部图片
+        message: #信笺正文，多行文本，写法如下
+          - 有什么想问的？
+          - 有什么想说的？
+          - 有什么想吐槽的？
+          - 哪怕是有什么想吃的，都可以告诉我哦~
+        bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
         height: #1050px，信封划出的高度
         path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
         front_matter: #【可选】comments页面的 front_matter 配置
+          title: 留言板
+          comments: true
     ```
 
 # 截图
