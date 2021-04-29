@@ -1,24 +1,3 @@
-<style>
-kbd{
-  display: inline-block;
-  color: #666;
-  font: bold 9pt arial;
-  text-decoration: none;
-  text-align: center;
-  padding: 2px 5px;
-  margin: 0 5px;
-  background: #eff0f2;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border-top: 1px solid #f5f5f5;
-  -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  -moz-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  text-shadow: 0 1px 0 #f5f5f5;
-}
-</style>
-
 # hexo-butterfly-envelope
 
 给`hexo-theme-butterfly`添加 [信封样式留言板](https://akilar.top/posts/e2d3c450/)
@@ -55,12 +34,12 @@ kbd{
 
   |参数|备选值/类型|释义|
   |:--|:--|:--|
-  |enable|<kbd>true</kbd><kbd>false</kbd>|控制开关|
-  |cover|<kbd>URL</kbd>|信笺头部图片链接|
-  |message|<kbd>text</kbd>|信笺正文，支持多行文本，写法见上文示例|
-  |bottom|<kbd>text</kbd>|信笺底部信息，仅支持单行文本|
-  |height|<kbd>1050px</kbd>|默认1050px，信封划出的高度|
-  |path|<kbd>comments</kbd>|【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html|
-  |front_matter|<kbd>object</kbd>|【可选】comments页面的 front_matter 配置,写法见上文示例|
+  |enable|true/false|控制开关|
+  |cover|URL|信笺头部图片链接|
+  |message|text|信笺正文，支持多行文本，写法见上文示例|
+  |bottom|text|信笺底部信息，仅支持单行文本|
+  |height|1050px|默认1050px，信封划出的高度|
+  |path|comments|【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html|
+  |front_matter|object|【可选】comments页面的 front_matter 配置,写法见上文示例|
 # 截图
 ![](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo@v2.3/smms/A7DXgfwFJujLCzE.png)
