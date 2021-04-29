@@ -1,10 +1,6 @@
 {
   "name": "hexo-butterfly-fcircle",
-<<<<<<< HEAD
   "version": "0.0.5",
-=======
-  "version": "0.0.4",
->>>>>>> d25251323040f70ddf38fc22511002df0c55d9b0
   "description": "A friend link subscribe plugin for theme-butterfly",
   "main": "index.js",
   "scripts": {
