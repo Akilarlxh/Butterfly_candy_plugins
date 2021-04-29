@@ -127,7 +127,7 @@ var data_handle = (nofollow, data, maxnumber) => {
   }
   //加载更多
   if (data[1].length - maxnumber > 0) {
-    html_item += '<div class="fc_center"><button type="button" class="moments_load_button" onclick="load_more_post()">加载更多...</button></div>'
+    html_item += '<div style="text-align: center;"><button type="button" class="moments_load_button" onclick="load_more_post()">加载更多...</button></div>'
   }
 
   var friend_link_circle = document.getElementById('friend_link_circle');

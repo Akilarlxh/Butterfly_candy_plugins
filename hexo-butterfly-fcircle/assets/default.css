@@ -161,3 +161,16 @@ a.article-sort-item-title{
 .fc_center{
   text-align: center;
 }
+button.moments_load_button {
+    /* text-align: center; */
+    /* border: aliceblue; */
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    width: fit-content;
+    /* vertical-align: super; */
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 13px;
+    padding: 8px 51px;
+}
