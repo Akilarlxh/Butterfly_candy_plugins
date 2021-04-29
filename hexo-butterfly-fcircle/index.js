@@ -4,21 +4,25 @@ const pug = require('pug')
 const path = require('path')
 const urlFor = require('hexo-util').url_for.bind(hexo)
 const util = require('hexo-util')
-hexo.extend.generator.register('comments', function (locals) {
-  const config = hexo.config.envelope_comment || hexo.theme.config.envelope_comment
+hexo.extend.generator.register('fcircle', function (locals) {
+  const config = hexo.config.fcircle || hexo.theme.config.fcircle
 
   if (!(config && config.enable)) return
 
   const data = {
-    author: hexo.config.author,
-    cover: config.cover ? urlFor(config.cover) : "https://ae01.alicdn.com/kf/U5bb04af32be544c4b41206d9a42fcacfd.jpg",
-    message: config.message ?  config.message : ["有什么想问的？","有什么想说的？","有什么想吐槽的？","哪怕是有什么想吃的，都可以告诉我哦~"],
-    bottom: config.bottom ? config.bottom : "自动书记人偶竭诚为您服务",
-    height: config.height ? config.height : "1050px"
+    requests_url: urlFor(config.apiurl), //api地址
+    maxnumber: config.maxnumber ? config.maxnumber : 20, //页面展示文章数量
+    addnumber: config.addnumber ? config.addnumber : 10, //每次加载增加的篇数
+    opentype: config.opentype ? config.opentype : "_blank", //'_blank'打开新标签,'_self'本窗口打开
+    nofollow: config.nofollow ? config.nofollow : true, //开启禁止搜索引擎抓取
+    preload: config.preload ? urlFor(config.preload) : "",
+    error_img: hexo.theme.config.error_img.flink ? urlFor(hexo.theme.config.error_img.flink) : "https://cdn.jsdelivr.net/gh/Zfour/Butterfly-friend-poor-html/friendcircle/404.png",
+    fcircleCss: config.css ? urlFor(config.css) : "./assets/default.css",
+    fcircleJs: config.js ? urlFor(config.js) : "./assets/fcircle.js"
   }
-  const content = pug.renderFile(path.join(__dirname, './lib/html.pug'), data)
+  const content = pug.renderFile(path.join(__dirname, './assets/html.pug'), data)
 
-  const pathPre = config.path || 'comments'
+  const pathPre = config.path || 'fcircle'
 
   let pageDate = {
     content: content

@@ -1,23 +1,15 @@
-var requests_url = 'https://hexo-circle-of-friends-api.vercel.app/api'; //api地址
-var orign_data = []; //api请求所得到的源数据
-var maxnumber = 20; //页面展示文章数量
-var addnumber = 10; //每次加载增加的篇数
-var opentype = '_blank'; //'_blank'打开新标签,'_self'本窗口打开
-var nofollow = true; //禁止搜索引擎抓取
-// 自定义loading图 例如: var loadingCutom = '<i class="fa fa-spinner fa-spin"></i>'
-// 自定义loading图 例如: var loadingCutom = '<img src="你的图片地址" alt="加载中...">'
-var loadingCutom = ''
 //处理数据
+var orign_data = []; //api请求所得到的源数据
 
-if (document.getElementById('moments_container')) {
+if (document.getElementById('friend_link_circle')) {
   //添加加载动画
-  var loading_pic = document.getElementById('moments_container');
+  var loading_pic = document.getElementById('friend_link_circle');
 
-  // 判断loadingCutom值是否为空
-  if (typeof loadingCutom == "undefined" || loadingCutom == null || loadingCutom === "") {
-    loading_pic.innerHTML = '<center><span id="moments_loading"><div class="loader"></div></span></center>';
+  // 判断preload值是否为空
+  if (typeof preload == "undefined" || preload == null || preload === "") {
+    loading_pic.innerHTML = '<span id="moments_loading" class="fc_center"><div class="loader"></div></span>';
   } else {
-    loading_pic.innerHTML = '<center><span id="moments_loading">' + loadingCutom + '</span></center>';
+    loading_pic.innerHTML = `<span id="moments_loading" class="fc_center"><img src="${preload}" alt="loading......"></span>`;
   }
 
   fetch(requests_url).then(
@@ -68,26 +60,26 @@ var data_handle = (nofollow, data, maxnumber) => {
           html_item += '<div id="info_user_poor">';
             html_item += '<div class="chart">';
               html_item += '<span class="friend_post_info_title">当前友链数:</span>';
-              html_item += '<span class="friend_post_info_number">' + user_lenth +'个</span>';
+              html_item += `<span class="friend_post_info_number">${user_lenth}个</span>`;
               html_item += '<br>';
               html_item += '<span class="friend_post_info_title">失败数:</span>';
-              html_item += '<span class="friend_post_info_number">' + error +'个</span>';
+              html_item += `<span class="friend_post_info_number">${error}个</span>`;
               html_item += '<br>';
             html_item += '</div>';
             html_item += '<div class="chart">';
               html_item += '<span class="friend_post_info_title">活跃友链数:</span>';
-              html_item += '<span class="friend_post_info_number">' + unique_live_link +'个</span>';
+              html_item += `<span class="friend_post_info_number">${unique_live_link}个</span>`;
               html_item += '<br>';
               html_item += '<span class="friend_post_info_title">当前库存:</span>';
-              html_item += '<span class="friend_post_info_number">' + listlenth +'篇</span>';
+              html_item += `<span class="friend_post_info_number">${listlenth}篇</span>`;
               html_item += '<br>';
             html_item += '</div>';
             html_item += '<div class="chart">';
               html_item += '<span class="friend_post_info_title">今日更新:</span>';
-              html_item += '<span class="friend_post_info_number">' + today_post +'篇</span>';
+              html_item += `<span class="friend_post_info_number">${today_post}篇</span>`;
               html_item += '<br>';
               html_item += '<span class="friend_post_info_title">最近更新:</span>';
-              html_item += '<span class="friend_post_info_number">' + last_update_time +'</span>';
+              html_item += `<span class="friend_post_info_number">${last_update_time}</span>`;
             html_item += '</div>';
           html_item += '</div>';
         html_item += '</div>';
@@ -95,7 +87,7 @@ var data_handle = (nofollow, data, maxnumber) => {
 
   for (var month_item of datalist_slice) {
     //------月份划分-----
-    html_item += '<div class="article-sort-title">' + month_item[0] + '</div>';
+    html_item += `<div class="article-sort-title">${month_item[0]}</div>`;
     html_item += '<div class="article-sort">';
       //----更新文章循环节----
       for (var post_item of month_item[1]) {
@@ -116,6 +108,7 @@ var data_handle = (nofollow, data, maxnumber) => {
             html_item += `<img onerror=this.onerror=null;this.src="${error_img}" data-ll-status='loaded' src="${post_item[4]}" class="entered loaded">`;
           html_item += '</a>';
           html_item += '<div class="article-sort-item-info">';
+            html_item += `<a target="${opentype}" href="${post_item[2]}" title="${post_item[0]}" rel="${rel}">${post_item[0]}</a>`;
             html_item += '<div class="article-sort-item-time">';
               html_item += '<i class="far fa-user"></i>';
               html_item += `<span>${post_item[3]}</span>`;
@@ -124,7 +117,7 @@ var data_handle = (nofollow, data, maxnumber) => {
                 html_item += `<time datetime="${post_item[1]}" title="${post_item[1]}">${post_item[1]}</time>`;
               html_item += '</div>';
             html_item += '</div>';
-            html_item += `<a target="${opentype}" href="${post_item[2]}" title="${post_item[0]}" rel="${rel}">${post_item[0]}</a>`;
+
           html_item += '</div>';
         html_item += '</div>';
         //-----正文主体结束----
@@ -137,14 +130,14 @@ var data_handle = (nofollow, data, maxnumber) => {
     html_item += '<div class="fc_center"><button type="button" class="moments_load_button" onclick="load_more_post()">加载更多...</button></div>'
   }
 
-  var moments_container = document.getElementById('moments_container');
-  append_div(moments_container, html_item)
+  var friend_link_circle = document.getElementById('friend_link_circle');
+  append_div(friend_link_circle, html_item)
 };
 
 var load_more_post = () => {
-  if (document.getElementById('moments_container')) {
+  if (document.getElementById('friend_link_circle')) {
     maxnumber = maxnumber + addnumber;
-    document.getElementById('moments_container').innerHTML = "";
+    document.getElementById('friend_link_circle').innerHTML = "";
     data_handle(nofollow, orign_data, maxnumber)
   }
 };
@@ -153,7 +146,7 @@ var load_more_post = () => {
 //将html放入指定id的div容器
 var append_div = (parent, text) => {
   //检测到主体容器以后将加载动画内容置空
-  if (document.getElementById('moments_container')) {
+  if (document.getElementById('friend_link_circle')) {
     loading_pic.innerHTML = ``;
   };
   if (typeof text === 'string') {

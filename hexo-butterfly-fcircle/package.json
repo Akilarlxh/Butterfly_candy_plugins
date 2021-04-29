@@ -10,13 +10,14 @@
     "lib": "./lib"
   },
   "files": [
-    "lib/",
+    "assets/",
     "index.js"
   ],
   "keywords": [
     "hexo",
     "renderer",
     "friendlink",
+    "candyhome",
     "butterfly",
     "theme-butterfly",
     "plugins"
