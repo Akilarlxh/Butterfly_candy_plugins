@@ -157,3 +157,23 @@ a.article-sort-item-title{
     margin: 0;
   }
 }
+<<<<<<< HEAD
+=======
+/* 居中按钮样式 */
+.fc_center{
+  text-align: center;
+}
+button.moments_load_button {
+    /* text-align: center; */
+    /* border: aliceblue; */
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    width: fit-content;
+    /* vertical-align: super; */
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 13px;
+    padding: 8px 51px;
+}
+>>>>>>> d25251323040f70ddf38fc22511002df0c55d9b0
