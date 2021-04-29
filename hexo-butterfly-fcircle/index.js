@@ -17,8 +17,8 @@ hexo.extend.generator.register('fcircle', function (locals) {
     nofollow: config.nofollow ? config.nofollow : true, //开启禁止搜索引擎抓取
     preload: config.preload ? urlFor(config.preload) : "",
     error_img: hexo.theme.config.error_img.flink ? urlFor(hexo.theme.config.error_img.flink) : "https://cdn.jsdelivr.net/gh/Zfour/Butterfly-friend-poor-html/friendcircle/404.png",
-    fcircleCss: config.css ? urlFor(config.css) : "./assets/default.css",
-    fcircleJs: config.js ? urlFor(config.js) : "./assets/fcircle.js"
+    fcircleCss: config.css ? urlFor(config.css) : "https://cdn.jsdelivr.net/npm/hexo-butterfly-fcircle/assets/default.css",
+    fcircleJs: config.js ? urlFor(config.js) : "https://cdn.jsdelivr.net/npm/hexo-butterfly-fcircle/assets/fcircle.js"
   }
   const content = pug.renderFile(path.join(__dirname, './assets/html.pug'), data)
 

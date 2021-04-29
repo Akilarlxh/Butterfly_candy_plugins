@@ -1,24 +1,3 @@
-<style>
-kbd{
-  display: inline-block;
-  color: #666;
-  font: bold 9pt arial;
-  text-decoration: none;
-  text-align: center;
-  padding: 2px 5px;
-  margin: 0 5px;
-  background: #eff0f2;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border-top: 1px solid #f5f5f5;
-  -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  -moz-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,0 1px 2px #333;
-  text-shadow: 0 1px 0 #f5f5f5;
-}
-</style>
-
 # hexo-butterfly-envelope
 
 给`hexo-theme-butterfly`添加 [友链朋友圈](https://akilar.top/posts/8480b91c/)
@@ -56,17 +35,17 @@ kbd{
 
   |参数|备选值/类型|释义|
   |:--|:--|:--|
-  |enable|<kbd>true</kbd><kbd>false</kbd>|控制开关|
-  |apiurl|<kbd>URL</kbd>|api链接，配置教程参看[基于 hexo 的友链朋友圈](https://zfe.space/friendcircle/)|
-  |maxnumber|<kbd>number</kbd>|【可选】填写阿拉伯数字，页面展示文章数量，默认20|
-  |addnumber|<kbd>number</kbd>|【可选】填写阿拉伯数字，每次加载增加的篇数，默认10|
-  |opentype|<kbd>'_blank'</kbd><kbd>'_self'</kbd> |【可选】'_blank'新标签打开,'_self'本窗口打开,默认为'_blank'|
-  |nofollow| <kbd>true</kbd><kbd>false</kbd> |【可选】开启禁止搜索引擎抓取,默认开启|
-  |preload| <kbd>URL</kbd>|【可选】加载动画图片链接|
-  |css| <kbd>URL</kbd>|【可选】开发者接口，自定义css链接|
-  |js| <kbd>URL</kbd>|【可选】开发者接口，自定义js链接|
-  |path| <kbd>string</kbd>|【可选】字符串，fcircle的路径名称。默认为 fcircle，生成的页面为 fcircle/index.html|
-  |front_matter|<kbd>object</kbd>|【可选】写法见上文示例，fcircle页面的 front_matter 配置|
+  |enable|true/false|控制开关|
+  |apiurl|URL|api链接，配置教程参看[基于 hexo 的友链朋友圈](https://zfe.space/friendcircle/)|
+  |maxnumber|number|【可选】填写阿拉伯数字，页面展示文章数量，默认20|
+  |addnumber|number|【可选】填写阿拉伯数字，每次加载增加的篇数，默认10|
+  |opentype|'_blank''_self' |【可选】'_blank'新标签打开,'_self'本窗口打开,默认为'_blank'|
+  |nofollow| true/false |【可选】开启禁止搜索引擎抓取,默认开启|
+  |preload| URL|【可选】加载动画图片链接|
+  |css| URL|【可选】开发者接口，自定义css链接|
+  |js| URL|【可选】开发者接口，自定义js链接|
+  |path| string|【可选】字符串，fcircle的路径名称。默认为 fcircle，生成的页面为 fcircle/index.html|
+  |front_matter|object|【可选】写法见上文示例，fcircle页面的 front_matter 配置|
 
 # 截图
   ![](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/Friend-link-subscription-dfbba739.png)
