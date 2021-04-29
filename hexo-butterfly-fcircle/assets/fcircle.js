@@ -7,9 +7,9 @@ if (document.getElementById('friend_link_circle')) {
 
   // 判断preload值是否为空
   if (typeof preload == "undefined" || preload == null || preload === "") {
-    loading_pic.innerHTML = '<span id="moments_loading" class="fc_center"><div class="loader"></div></span>';
+    loading_pic.innerHTML = '<span id="moments_loading" style="text-align: center;"><div class="loader"></div></span>';
   } else {
-    loading_pic.innerHTML = `<span id="moments_loading" class="fc_center"><img src="${preload}" alt="loading......"></span>`;
+    loading_pic.innerHTML = `<span id="moments_loading" style="text-align: center;"><img src="${preload}" alt="loading......"></span>`;
   }
 
   fetch(requests_url).then(
@@ -128,7 +128,7 @@ var data_handle = (nofollow, data, maxnumber) => {
   }
   //加载更多
   if (data[1].length - maxnumber > 0) {
-    html_item += '<div style="text-align: center;"><button type="button" class="moments_load_button" onclick="load_more_post()">加载更多...</button></div>'
+    html_item += '<div style="text-align: center;"><button type="button" style="background: var(--btn-bg);color: var(--btn-color);width: fit-content;margin: 0 auto;font-size: 20px;font-weight: bolder;border-radius: 13px;padding: 8px 51px;" onclick="load_more_post()">加载更多...</button></div>'
   }
 
   var friend_link_circle = document.getElementById('friend_link_circle');
