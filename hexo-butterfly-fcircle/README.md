@@ -16,7 +16,7 @@
     # fcircle
     # see https://zfe.space/friendcircle/
     # see https://akilar.top/posts/8480b91c/
-    ficrcle:
+    fcircle:
       enable: true #控制开关
       apiurl: https://hexo-circle-of-friends-api.vercel.app/api #api地址
       maxnumber: 20 #【可选】页面展示文章数量
