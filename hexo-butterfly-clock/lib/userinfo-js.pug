@@ -1,0 +1,14 @@
+.js-pjax
+  script.
+    function ${pluginname}_injector_config(){
+      var parent_div = ${get_layout};
+      var item_html = '${temple_html_text}';
+      console.log('已挂载${pluginname}')
+      // parent_div.innerHTML=item_html+parent_div.innerHTML
+      // 无报错，但不影响使用(支持pjax跳转)
+      parent_div.insertAdjacentHTML("afterbegin",item_html)
+      // 有报错，但不影响使用(支持pjax跳转)
+      } 
+    if ( ${get_layout} && (location.pathname ==='${enable_page}'|| '${enable_page}' ==='all')){
+      ${pluginname}_injector_config()
+    }
